@@ -73,7 +73,7 @@ GSM3_NetworkStatus_t GPRS::attachGPRS(const char* apn, const char* user_name, co
 
     while (ready() == 0) {
       if (_timeout && !((millis() - start) < _timeout)) {
-        _state = ERROR;
+        _status = ERROR;
         break;
       }
 
